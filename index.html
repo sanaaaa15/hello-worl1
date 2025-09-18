@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Fillout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mini Fillout</h1>
+    <form id="myForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    <div id="thankyou" style="display:none;">
+        <h2>Thank you for submitting!</h2>
+    </div>      
+    <script>
+        document.getElementById('myForm').onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById('myForm').style.display = 'none';
+            document.getElementById('thankyou').style.display = 'block';
+        };
+    </script>
+</body>
+</html>
